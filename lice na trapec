@@ -3,11 +3,17 @@ import java.util.Scanner;
 public class trapec {
 
 	
+	public static void trapec(double a, double b, double h) {
+		double s;
+				s=(a+b)*(h/2);
+					
+			System.out.println("s= "+s);		
+					}
 
-public static double trapec2(double a, double b,double h) {
+public static double trapec2(double a2, double b2,double h2) {
 	
 	double s;
-	s=(a+b)*(h/2);
+	s=(a2+b2)*(h2/2);
 return s;
 
 }
@@ -16,8 +22,11 @@ public static void main(String[] args) {
 	double a=inp.nextDouble();
 	double b=inp.nextDouble();
 	double h=inp.nextDouble();
-
-System.out.println("s= "+trapec2(a,b,h));
+	double a2=inp.nextDouble();
+	double b2=inp.nextDouble();
+	double h2=inp.nextDouble();
+trapec(a,b,h);
+System.out.println("liceto= "+trapec2(a2,b2,h2));
 	}
 
 }
