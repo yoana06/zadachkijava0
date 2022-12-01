@@ -1,22 +1,19 @@
 import java.util.Scanner;
 
 public class trapec {
-
 	
-	public static void trapec(double a, double b, double h) {
-		double s;
-				s=(a+b)*(h/2);
-					
-			System.out.println("s= "+s);		
-					}
+public static void trapec(double a, double b, double h) {
+	double s;
+	s=(a+b)*(h/2);				
+	System.out.println("s= "+s);		
+}
 
 public static double trapec2(double a2, double b2,double h2) {
-	
 	double s;
 	s=(a2+b2)*(h2/2);
 return s;
-
 }
+
 public static void main(String[] args) {
 	Scanner inp=new Scanner(System.in);
 	double a=inp.nextDouble();
