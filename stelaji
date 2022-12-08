@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class stelaji {
+
+		public static void stelaji(int n) {
+		int br=0;
+			for (int i=1;i<=n;i++) {
+			int a=i;
+			int a1=0, a2=0, a3=0, a4=0, a5=0;
+			a1=a/10000;
+			a2=a/1000;
+			a2=a2%10;
+			a3=a/100;
+			a3=a3%10;
+			a4=a/10;
+			a4=a4%10;
+			a5=a%10;
+			if (a1==2||a2==2||a3==2||a4==2||a5==2)br++;
+			}	
+			System.out.println("tabeli -  "+br);		
+			}
+	
+public static void main(String[] args) {
+		Scanner inp=new Scanner(System.in);
+	int n=inp.nextInt();
+	stelaji(n);
+}
+}
