@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class masiv_dr {
+
+public static void input(int []arr) {
+		Scanner inp=new Scanner(System.in);
+	    for(int i=0;i<arr.length;i++) {
+	    	arr[i]=inp.nextInt();
+	    }
+	}
+	public static void output(int []arr) {
+		Scanner inp=new Scanner(System.in);
+	    for(int i=0;i<arr.length;i++) {
+	    }
+	}
+	public static void neotricatelenElement (int []arr) {
+		int sum=0;
+		boolean n=true;
+		for(int i=0;i<arr.length;i++) {
+			if (arr[i]<0 && n==true)sum+=arr[i]; 
+			else if(arr[i]>=0)n=false;
+	    }
+		System.out.println("suma na elementite predi purviq neotricatelen: "+sum);
+	}
+	    public static void sortirane(int []arr) {
+		for (int i = 0; i <arr.length-1; i++){
+	            for (int j = 0; j < arr.length-1; j++){
+	                if (arr[j] > arr[j + 1]){
+	                    int s = arr[j];
+	                    arr[j] = arr[j + 1];
+	                    arr[j + 1] = s;
+	                }
+	            }
+	        }
+	        for (int i = 0; i < arr.length; i++){	
+	            System.out.print(" " + arr[i]);
+	        }	
+	    }
+	public static void main(String[] args) {
+			Scanner inp=new Scanner(System.in);
+		    int n=inp.nextInt();
+			int[] arr = new int[n];  
+			input(arr);
+			output(arr);
+			neotricatelenElement(arr);
+			System.out.print("sortiran: ");
+			sortirane(arr);
+}
+}
