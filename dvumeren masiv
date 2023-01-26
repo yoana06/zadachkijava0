@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class dvumerni_masivi {
+
+public static void input(int [][]matrix) {
+	Scanner inp=new Scanner(System.in);
+	for (int i = 0; i < matrix.length; i++) {
+	       for (int j = 0; j < matrix.length; j++) {
+	    	   matrix[i][j] = inp.nextInt();
+	       }
+}
+}
+public static void output(int [][]matrix) {
+	for (int i = 0; i < matrix.length; i++) {
+	       for (int j = 0; j < matrix.length; j++) {
+	       }
+	   }
+}
+public static void suma(int [][]matrix) {
+	Scanner inp=new Scanner(System.in);
+	int sum=0;
+	int min=matrix[0][0];
+    int max=matrix[0][0];
+	for (int i = 0; i < matrix.length; i++) {
+	       for (int j = 0; j < matrix.length; j++) {
+	    	   if (matrix[i][j]<min)min=matrix[i][j];
+	    	   if (matrix[i][j]>max)max=matrix[i][j];
+	       }
+}
+	sum=min+max;
+	System.out.println("sumata na maksimalniq i minimalniq element: "+sum);
+	System.out.println("min- "+min+" max- "+max);
+}
+public static void srednoaritmetichno(int [][]matrix) {
+	double s=0, sr=1, br=0;
+	for (int i = 0; i < matrix.length; i++) {
+	       for (int j = 0; j < matrix.length; j++) {
+	    	if (matrix[i][j]>0) {br++;
+	    		s+=matrix[i][j];
+	    		sr=s/br;		
+	    	}
+	       }
+	}
+	System.out.println("srednoaritmetichno: "+sr);
+}
+public static void main(String[] args) {
+	Scanner inp=new Scanner(System.in);
+	int n = inp.nextInt();
+	int[][] matrix = new int[n][n];
+	input(matrix);
+	output(matrix);
+	suma(matrix);
+	srednoaritmetichno(matrix);
+	}
+}
