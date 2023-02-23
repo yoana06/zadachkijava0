@@ -1,0 +1,240 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class test_vasil_levski {
+
+	private JFrame frame;
+
+	/*СЪЗДАЙТЕ ПРИЛОЖЕНИЕ С ПАТРИОТИЧНА НАСОЧЕНОСТ, ТИП ЕЛЕКТРОНЕН ТЕСТ С МИНИМУМ ШЕСТ ВЪПРОСА И РАДИО БУТОНИ. 
+        ГЕНЕРИРАЙТЕ ОЦЕНКА!*/
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					test_vasil_levski window = new test_vasil_levski();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public test_vasil_levski() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.setBounds(100, 100, 969, 759);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 60, 930, 75);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Кой от споменатите български владетели е сключил тридесетгодишен мир с Византия?");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(19, 16, 555, 14);
+		panel.add(lblNewLabel_1);
+		
+		JRadioButton omurtag = new JRadioButton("хан Омуртаг");
+		omurtag.setBounds(19, 37, 109, 23);
+		panel.add(omurtag);
+		
+		JRadioButton presiqn = new JRadioButton("хан Пресиян");
+		presiqn.setBounds(289, 37, 109, 23);
+		panel.add(presiqn);
+		
+		JRadioButton krum = new JRadioButton("хан Крум");
+		krum.setBounds(559, 37, 109, 23);
+		panel.add(krum);
+		
+		JLabel lblNewLabel = new JLabel("ТЕСТ ПО РОДОЗНАНИЕ");
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel.setBounds(366, 21, 254, 20);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setLayout(null);
+		panel_1.setBounds(10, 160, 930, 75);
+		frame.getContentPane().add(panel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("В коя от революционните прояви участва младият Георги Раковски?");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1.setBounds(19, 16, 555, 14);
+		panel_1.add(lblNewLabel_1_1);
+		
+		JRadioButton greshen1 = new JRadioButton("Втория Браилски бунт");
+		greshen1.setBounds(19, 37, 168, 23);
+		panel_1.add(greshen1);
+		
+		JRadioButton greshen2 = new JRadioButton("Първото Търновско въстание");
+		greshen2.setBounds(289, 37, 268, 23);
+		panel_1.add(greshen2);
+		
+		JRadioButton veren = new JRadioButton("четата на Хаджи Димитър и Стефан Караджа");
+		veren.setBounds(559, 37, 320, 23);
+		panel_1.add(veren);
+		
+		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setLayout(null);
+		panel_1_1.setBounds(10, 260, 930, 75);
+		frame.getContentPane().add(panel_1_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Иларион Макариополски е:");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_1.setBounds(19, 16, 555, 14);
+		panel_1_1.add(lblNewLabel_1_1_1);
+		
+		JRadioButton greshen3 = new JRadioButton("български духовник от XVIII в.");
+		greshen3.setBounds(19, 37, 268, 23);
+		panel_1_1.add(greshen3);
+		
+		JRadioButton greshen4 = new JRadioButton("български книжовник от XVIII в.");
+		greshen4.setBounds(289, 37, 268, 23);
+		panel_1_1.add(greshen4);
+		
+		JRadioButton veren2 = new JRadioButton("водач на църковно-националното движение през XIX в.");
+		veren2.setBounds(559, 37, 369, 23);
+		panel_1_1.add(veren2);
+		
+		JPanel panel_1_2 = new JPanel();
+		panel_1_2.setLayout(null);
+		panel_1_2.setBounds(10, 360, 930, 75);
+		frame.getContentPane().add(panel_1_2);
+		
+		JLabel lblNewLabel_1_1_2 = new JLabel("На коя партия е основател и лидер Стефан Стамболов?");
+		lblNewLabel_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_2.setBounds(19, 16, 555, 14);
+		panel_1_2.add(lblNewLabel_1_1_2);
+		
+		JRadioButton liberalna = new JRadioButton("Либералната");
+		liberalna.setBounds(19, 37, 168, 23);
+		panel_1_2.add(liberalna);
+		
+		JRadioButton progresivna = new JRadioButton("Прогресивнолибералната");
+		progresivna.setBounds(289, 37, 268, 23);
+		panel_1_2.add(progresivna);
+		
+		JRadioButton narodna = new JRadioButton("Народнолибералната");
+		narodna.setBounds(559, 37, 326, 23);
+		panel_1_2.add(narodna);
+		
+		JPanel panel_1_3 = new JPanel();
+		panel_1_3.setLayout(null);
+		panel_1_3.setBounds(10, 460, 930, 75);
+		frame.getContentPane().add(panel_1_3);
+		
+		JLabel lblNewLabel_1_1_3 = new JLabel("В коя област се намирали владенията на деспот Добротица през XIV в.?");
+		lblNewLabel_1_1_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_3.setBounds(19, 16, 555, 14);
+		panel_1_3.add(lblNewLabel_1_1_3);
+		
+		JRadioButton trakiq = new JRadioButton("Тракия");
+		trakiq.setBounds(19, 37, 168, 23);
+		panel_1_3.add(trakiq);
+		
+		JRadioButton dobrudja = new JRadioButton("Добруджа");
+		dobrudja.setBounds(289, 37, 268, 23);
+		panel_1_3.add(dobrudja);
+		
+		JRadioButton makedoniq = new JRadioButton("Македония");
+		makedoniq.setBounds(559, 37, 225, 23);
+		panel_1_3.add(makedoniq);
+		
+		JPanel panel_1_4 = new JPanel();
+		panel_1_4.setLayout(null);
+		panel_1_4.setBounds(10, 560, 930, 75);
+		frame.getContentPane().add(panel_1_4);
+		
+		JLabel lblNewLabel_1_1_4 = new JLabel("Кой вестник издава Захари Стоянов в Източна Румелия?");
+		lblNewLabel_1_1_4.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_4.setBounds(19, 16, 555, 14);
+		panel_1_4.add(lblNewLabel_1_1_4);
+		
+		JRadioButton greshen = new JRadioButton("„Цариградски вестник“");
+		greshen.setBounds(19, 37, 168, 23);
+		panel_1_4.add(greshen);
+		
+		JRadioButton borba = new JRadioButton("„Борба“");
+		borba.setBounds(289, 37, 268, 23);
+		panel_1_4.add(borba);
+		
+		JRadioButton demokraciq = new JRadioButton("„Демокрация“");
+		demokraciq.setBounds(559, 37, 225, 23);
+		panel_1_4.add(demokraciq);
+		
+		JLabel lblNewLabel_2 = new JLabel("OЦЕНКА:");
+		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel_2.setBounds(288, 650, 88, 42);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		JLabel ocenka = new JLabel("");
+		ocenka.setFont(new Font("Tahoma", Font.BOLD, 15));
+		ocenka.setBounds(386, 648, 55, 44);
+		frame.getContentPane().add(ocenka);
+		
+		JButton btnNewButton = new JButton("ПРОВЕРИ");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int br=0;
+				if (omurtag.isSelected())br++;
+				if (veren.isSelected())br++;
+				if (veren2.isSelected())br++;
+				if (liberalna.isSelected())br++;
+				if (dobrudja.isSelected())br++;
+				if (borba.isSelected())br++;
+				if (br<2) ocenka.setText("2");
+				else ocenka.setText(Integer.toString(br));
+			}
+		});
+		btnNewButton.setBounds(489, 657, 103, 31);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("ИЗЧИСТИ");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				omurtag.setSelected(false);
+				presiqn.setSelected(false);
+				krum.setSelected(false);
+				greshen1.setSelected(false);
+				greshen2.setSelected(false);
+				greshen3.setSelected(false);
+				veren.setSelected(false);
+				veren2.setSelected(false);
+				greshen4.setSelected(false);
+				liberalna.setSelected(false);
+				progresivna.setSelected(false);
+				narodna.setSelected(false);
+				dobrudja.setSelected(false);
+				trakiq.setSelected(false);
+				makedoniq.setSelected(false);
+				greshen.setSelected(false);
+				borba.setSelected(false);
+				demokraciq.setSelected(false);
+				
+			}
+		});
+		btnNewButton_1.setBounds(631, 657, 103, 31);
+		frame.getContentPane().add(btnNewButton_1);
+	}
+}
