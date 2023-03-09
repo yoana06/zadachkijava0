@@ -1,0 +1,173 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.border.EtchedBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
+
+public class triugulnik extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField a;
+	private JTextField b;
+	private JTextField c;
+
+	/*Създайте приложение, което пресмята лицето и периметъра на триъгълник по дадени три страни и 
+	 * определя вида му, според страните. Приложете Херонова формула.*/
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					triugulnik frame = new triugulnik();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public triugulnik() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 462, 367);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(144, 238, 144));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(143, 188, 143));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u041B\u0438\u0446\u0435 \u0438 \u043F\u0435\u0440\u0438\u043C\u0435\u0442\u044A\u0440 \u043D\u0430 \u0442\u0440\u0438\u044A\u0433\u044A\u043B\u043D\u0438\u043A", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBounds(10, 11, 426, 306);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Въведете 3 страни:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		lblNewLabel.setBounds(27, 41, 184, 14);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("а=");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(27, 84, 46, 14);
+		panel.add(lblNewLabel_1);
+		
+		a = new JTextField();
+		a.setBounds(50, 81, 86, 20);
+		panel.add(a);
+		a.setColumns(10);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("b=");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1.setBounds(27, 121, 46, 14);
+		panel.add(lblNewLabel_1_1);
+		
+		b = new JTextField();
+		b.setColumns(10);
+		b.setBounds(50, 120, 86, 20);
+		panel.add(b);
+		
+		c = new JTextField();
+		c.setColumns(10);
+		c.setBounds(50, 158, 86, 20);
+		panel.add(c);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("c=");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1_1_1.setBounds(27, 161, 46, 14);
+		panel.add(lblNewLabel_1_1_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Периметърът P=");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_2.setBounds(182, 84, 136, 14);
+		panel.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("Лицето S=");
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_2_1.setBounds(182, 121, 96, 14);
+		panel.add(lblNewLabel_2_1);
+		
+		JLabel perimetur = new JLabel("");
+		perimetur.setFont(new Font("Tahoma", Font.BOLD, 15));
+		perimetur.setBounds(319, 84, 76, 14);
+		panel.add(perimetur);
+		
+		JLabel lice = new JLabel("");
+		lice.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lice.setBounds(272, 121, 123, 14);
+		panel.add(lice);
+		
+		JLabel vid = new JLabel("");
+		vid.setFont(new Font("Tahoma", Font.BOLD, 14));
+		vid.setBounds(316, 162, 134, 14);
+		panel.add(vid);
+		
+		JButton presmetni = new JButton("ПРЕСМЕТНИ");
+		presmetni.setBackground(SystemColor.info);
+		presmetni.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double p=0.0,s=1.0;
+				double a1=Double.parseDouble(a.getText());
+				double b1=Double.parseDouble(b.getText());
+				double c1=Double.parseDouble(c.getText());
+				p=a1+b1+c1;
+				s=Math.sqrt((p/2)*(p/2-a1)*(p/2-b1)*(p/2-c1));
+			    if (a1==b1&&b1==c1) vid.setText("равностранен");
+			    else if (a1==b1||b1==c1||a1==c1) vid.setText("равнобедрен");
+			    else vid.setText("разностранен");
+				String pp=Double.toString(p);
+				String ss=Double.toString(s);
+				lice.setText(ss);
+				perimetur.setText(pp);
+			}
+		});
+		presmetni.setBounds(27, 240, 123, 33);
+		panel.add(presmetni);
+		
+		JButton izchisti = new JButton("ИЗЧИСТИ");
+		izchisti.setBackground(SystemColor.info);
+		izchisti.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a.setText("");
+				b.setText("");
+				c.setText("");
+				lice.setText("");
+				perimetur.setText("");
+				vid.setText("");
+			}
+		});
+		izchisti.setBounds(160, 240, 103, 33);
+		panel.add(izchisti);
+		
+		JButton izhod = new JButton("ИЗХОД");
+		izhod.setBackground(SystemColor.info);
+		izhod.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		izhod.setBounds(272, 240, 123, 33);
+		panel.add(izhod);
+		
+		JLabel lblNewLabel_2_1_1 = new JLabel("Триъгълникът е ");
+		lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 14));
+		lblNewLabel_2_1_1.setBounds(182, 161, 134, 14);
+		panel.add(lblNewLabel_2_1_1);
+		
+		
+	}
+}
