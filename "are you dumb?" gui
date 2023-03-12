@@ -1,0 +1,109 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class idkk extends JFrame {
+
+	private JPanel contentPane;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					idkk frame = new idkk();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public idkk() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 450);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(216, 191, 216));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton yes = new JButton("yes!");
+		yes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {			
+			JOptionPane.showMessageDialog(null, "glad you admit it ");
+		        System.exit(0);
+		
+			}
+		});
+		yes.setBounds(80, 252, 100, 40);
+		contentPane.add(yes);
+		
+		JButton no = new JButton("no");
+		no.addActionListener(new ActionListener() {
+			int click = 0;
+			public void actionPerformed(ActionEvent e) {
+			            switch (click) {
+			                case 0:
+			                    no.setLocation(100, 50);
+			                    break;
+			                case 1:
+			                	no.setLocation(250, 180);
+			                    break;
+			                case 2:
+			                	no.setLocation(350, 175);
+			                    break;
+			                case 3:
+			                	no.setLocation(200, 300);
+			                    break;
+			                case 4:
+			                	no.setLocation(300, 200);
+			                    break;
+			                case 5:
+			                	no.setLocation(190, 20);
+			                    break;
+			                case 6:
+			                    no.setLocation(100, 50);
+			                    break;
+			                case 7:
+			                	no.setLocation(220, 180);
+			                    break;
+			                case 8:
+			                	no.setLocation(310, 175);
+			                    break;
+			                case 9:
+			                	no.setLocation(270, 300);
+			                    break;
+			                case 10:
+			                	no.setLocation(290, 200);
+			                    break;
+			                case 11:
+			                	no.setLocation(90, 40);
+			                    break;
+			                case 12:
+			                	JOptionPane.showMessageDialog(null, " just give up already ");
+			                	System.exit(0);
+			                    break;
+			            }
+			            click++;
+		}
+		});
+		no.setBounds(240, 252, 100, 40);
+		contentPane.add(no);
+		
+		JLabel lblNewLabel = new JLabel("ARE YOU DUMB?");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblNewLabel.setBounds(125, 100, 181, 25);
+		contentPane.add(lblNewLabel);
+	}
+}
