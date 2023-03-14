@@ -1,0 +1,223 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.SystemColor;
+import javax.swing.border.MatteBorder;
+
+public class kalkulator extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txta;
+	private JTextField txtb;
+	private JButton plus;
+	private JButton minus;
+	private JButton multiplication;
+	private JButton devide;
+	private JButton power;
+	private JButton average;
+	private JLabel result;
+	private JButton exit;
+	private JButton clear;
+	JFrame jframe = new JFrame("My JFrame Title");
+	private JPanel panel_1;
+	private JPanel panel_2;
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					kalkulator frame = new kalkulator();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public kalkulator() {
+		setBackground(new Color(240, 255, 240));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 460, 470);
+		contentPane = new JPanel();
+		contentPane.setForeground(new Color(230, 230, 250));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblB = new JLabel("B:");
+		lblB.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblB.setBounds(243, 65, 46, 14);
+		contentPane.add(lblB);
+		
+		plus = new JButton("A+B");
+		plus.setForeground(SystemColor.inactiveCaptionText);
+		plus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double sum=0.0;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				sum=a+b;
+				String s=Double.toString(sum);
+				result.setText(s);
+			}
+		});
+		plus.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		plus.setBounds(60, 129, 90, 40);
+		contentPane.add(plus);
+		
+		minus = new JButton("A-B");
+		minus.setForeground(SystemColor.inactiveCaptionText);
+		minus.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double minus=0.0;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				minus=a-b;
+				String m=Double.toString(minus);
+				result.setText(m);
+			}
+		});
+		minus.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		minus.setBounds(180, 129, 90, 40);
+		contentPane.add(minus);
+		
+		multiplication = new JButton("A*B");
+		multiplication.setForeground(SystemColor.inactiveCaptionText);
+		multiplication.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double p=1;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				p=a*b;
+				String multiplicate=Double.toString(p);
+				result.setText(multiplicate);
+			}
+		});
+		multiplication.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		multiplication.setBounds(300, 129, 90, 40);
+		contentPane.add(multiplication);
+		
+		devide = new JButton("A / B");
+		devide.setForeground(SystemColor.inactiveCaptionText);
+		devide.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			double devide=1;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				devide=a/b;
+				String d=Double.toString(devide);
+				result.setText(d);	
+			}
+		});
+		devide.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		devide.setBounds(60, 203, 90, 40);
+		contentPane.add(devide);
+		
+		power = new JButton("A^B");
+		power.setForeground(SystemColor.inactiveCaptionText);
+		power.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double power=1;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				power=Math.pow(a, b);
+				String pp=Double.toString(power);
+				result.setText(pp);	
+			}
+		});
+		power.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		power.setBounds(180, 203, 90, 40);
+		contentPane.add(power);
+		
+		average = new JButton("AVE");
+		average.setForeground(SystemColor.inactiveCaptionText);
+		average.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double average=1;
+				double a=Double.parseDouble(txta.getText());
+				double b=Double.parseDouble(txtb.getText());
+				average= (a+b)/2;
+				String ave=Double.toString(average);
+				result.setText(ave);	
+			}
+		});
+		average.setFont(new Font("Tahoma", Font.PLAIN, 19));
+		average.setBounds(300, 203, 90, 40);
+		contentPane.add(average);
+		
+		result = new JLabel("РЕЗУЛТАТ");
+		result.setHorizontalAlignment(SwingConstants.CENTER);
+		result.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		result.setBounds(57, 293, 333, 29);
+		contentPane.add(result);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(135, 206, 235));
+		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+		panel.setForeground(SystemColor.inactiveCaptionBorder);
+		panel.setBounds(0, 0, 444, 431);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		txtb = new JTextField();
+		txtb.setBounds(267, 61, 86, 29);
+		panel.add(txtb);
+		txtb.setColumns(10);
+		
+		txta = new JTextField();
+		txta.setBounds(115, 61, 86, 29);
+		panel.add(txta);
+		txta.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("A:");
+		lblNewLabel.setBounds(91, 65, 46, 14);
+		panel.add(lblNewLabel);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		clear = new JButton("ИЗЧИСТИ");
+		clear.setBounds(91, 354, 110, 40);
+		panel.add(clear);
+		clear.setForeground(SystemColor.inactiveCaptionText);
+		clear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				result.setText("РЕЗУЛТАТ");
+				txta.setText("");
+				txtb.setText("");
+			}
+		});
+		clear.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		exit = new JButton("ИЗХОД");
+		exit.setBounds(243, 354, 110, 40);
+		panel.add(exit);
+		exit.setForeground(SystemColor.inactiveCaptionText);
+		exit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		exit.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		
+		panel_1 = new JPanel();
+		panel_1.setBounds(57, 42, 337, 65);
+		panel_1.setBackground(new Color(224, 255, 255));
+		panel.add(panel_1);
+		
+		panel_2 = new JPanel();
+		panel_2.setBounds(57, 282, 337, 46);
+		panel_2.setBackground(SystemColor.window);
+		panel.add(panel_2);
+	}
+}
