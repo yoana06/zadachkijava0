@@ -65,14 +65,21 @@ public class kalkulator extends JFrame {
 		plus.setForeground(SystemColor.inactiveCaptionText);
 		plus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				double sum=0.0;
+				double sum=0;
+				String s="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				sum=a+b;
-				String s=Double.toString(sum);
+				if (sum == (int)sum) 
+					 s=Integer.toString((int)sum);
+				else {
+					s=Double.toString(sum);
+				}				
 				result.setText(s);
-			}
+				}
 		});
+		
+	
 		plus.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		plus.setBounds(60, 129, 90, 40);
 		contentPane.add(plus);
@@ -82,11 +89,16 @@ public class kalkulator extends JFrame {
 		minus.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double minus=0.0;
+				String m="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				minus=a-b;
-				String m=Double.toString(minus);
-				result.setText(m);
+				if (minus == (int)minus) 
+					 m=Integer.toString((int)minus);
+				else {
+					 m=Double.toString(minus);
+				}				
+			result.setText(m);
 			}
 		});
 		minus.setFont(new Font("Tahoma", Font.PLAIN, 19));
@@ -98,10 +110,15 @@ public class kalkulator extends JFrame {
 		multiplication.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double p=1;
+				String multiplicate="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				p=a*b;
-				String multiplicate=Double.toString(p);
+				if (p == (int)p) 
+					multiplicate=Integer.toString((int)p);
+				else {
+					multiplicate=Double.toString(p);
+				}		
 				result.setText(multiplicate);
 			}
 		});
@@ -114,10 +131,15 @@ public class kalkulator extends JFrame {
 		devide.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			double devide=1;
+			String d="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				devide=a/b;
-				String d=Double.toString(devide);
+				if (devide == (int)devide) 
+					d=Integer.toString((int)devide);
+				else {
+					d=Double.toString(devide);
+				}		
 				result.setText(d);	
 			}
 		});
@@ -130,10 +152,15 @@ public class kalkulator extends JFrame {
 		power.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double power=1;
+				String pp="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				power=Math.pow(a, b);
-				String pp=Double.toString(power);
+				if (power == (int)power) 
+					pp=Integer.toString((int)power);
+				else {
+					pp=Double.toString(power);
+				}		
 				result.setText(pp);	
 			}
 		});
@@ -146,10 +173,15 @@ public class kalkulator extends JFrame {
 		average.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				double average=1;
+				String ave="";
 				double a=Double.parseDouble(txta.getText());
 				double b=Double.parseDouble(txtb.getText());
 				average= (a+b)/2;
-				String ave=Double.toString(average);
+				if (average == (int)average) 
+					ave=Integer.toString((int)average);
+				else {
+					ave=Double.toString(average);
+				}		
 				result.setText(ave);	
 			}
 		});
