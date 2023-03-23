@@ -1,0 +1,139 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+
+public class division extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtn;
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					division frame = new division();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public division() {
+		setFont(new Font("Bauhaus 93", Font.PLAIN, 13));
+		setTitle("деление на 7");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 551, 377);
+		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.info);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Въведете цяло число:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel.setBounds(24, 52, 170, 14);
+		contentPane.add(lblNewLabel);
+		
+		txtn = new JTextField();
+		txtn.setBounds(204, 51, 100, 20);
+		contentPane.add(txtn);
+		txtn.setColumns(10);
+		
+		JLabel lblchisla = new JLabel("");
+		lblchisla.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblchisla.setBounds(323, 113, 170, 20);
+		contentPane.add(lblchisla);
+		
+		JLabel lblNewLabel_1 = new JLabel("Числата, делящи се без остатък на 7 са:");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(24, 113, 307, 20);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("Сумата на числата е:");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_2.setBounds(24, 179, 170, 20);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Произведението на числата е:");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblNewLabel_3.setBounds(24, 239, 225, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblsum = new JLabel("");
+		lblsum.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblsum.setBounds(192, 179, 170, 20);
+		contentPane.add(lblsum);
+		
+		JLabel lblproizvedenie = new JLabel("");
+		lblproizvedenie.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblproizvedenie.setBounds(259, 236, 170, 20);
+		contentPane.add(lblproizvedenie);
+		
+		 StringBuilder output = new StringBuilder();
+		 
+		JButton btnNewButton = new JButton("Пресметни");
+		btnNewButton.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {		
+				int sum=0,proizv=1;
+				String s="",p="",numbers="";
+					double n=Double.parseDouble(txtn.getText());
+					//for (int i=0;i<n;i+=7) {
+					for (int i = 1; i <= n; i++) {
+			            if (i % 7 == 0) {
+						sum+=i;
+						proizv*=i;
+						numbers += Integer.toString(i) + " ";					
+						s=Integer.toString(sum);
+						p=Integer.toString(proizv);
+			            }
+					}
+					lblchisla.setText(numbers);
+					lblsum.setText(s);
+					lblproizvedenie.setText(p);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnNewButton.setBounds(149, 295, 100, 25);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Изчисти");
+		btnNewButton_1.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtn.setText("");
+				lblchisla.setText("");
+				lblproizvedenie.setText("");
+				lblsum.setText("");
+			}
+		});
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnNewButton_1.setBounds(279, 295, 100, 25);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Изход");
+		btnNewButton_2.setBackground(UIManager.getColor("Button.background"));
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnNewButton_2.setBounds(409, 295, 100, 25);
+		contentPane.add(btnNewButton_2);
+	
+	}
+}
