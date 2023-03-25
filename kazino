@@ -1,0 +1,148 @@
+import java.awt.BorderLayout;
+import java.util.Random;
+import java.awt.EventQueue;
+import java.awt.Toolkit;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.SystemColor;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+
+public class kazino extends JFrame {
+
+ private JPanel contentPane;
+
+ public static void main(String[] args) {
+ 
+ EventQueue.invokeLater(new Runnable() {
+ public void run() {
+ try {
+ kazino frame = new kazino();
+ frame.setVisible(true);
+ } catch (Exception e) {
+ e.printStackTrace();
+ }
+ }
+ });
+ }
+
+ public kazino() {
+ setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Student\\Downloads\\cat-sunglasses-512x512.png"));
+ setTitle("Хазарт");
+ setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ setBounds(100, 100, 712, 576);
+ contentPane = new JPanel();
+ contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+ setContentPane(contentPane);
+ contentPane.setLayout(null);
+ 
+ JPanel panel = new JPanel();
+ panel.setBackground(SystemColor.info);
+ panel.setBounds(10, 11, 676, 515);
+ contentPane.add(panel);
+ panel.setLayout(null);
+ 
+ JLabel lblchislo1 = new JLabel("");
+ lblchislo1.setFont(new Font("Franklin Gothic Book", Font.PLAIN, 25));
+ lblchislo1.setHorizontalAlignment(SwingConstants.CENTER);
+ lblchislo1.setBounds(299, 63, 74, 74);
+ panel.add(lblchislo1);
+ 
+ JLabel lblchislo2 = new JLabel("");
+ lblchislo2.setFont(new Font("Franklin Gothic Book", Font.PLAIN, 25));
+ lblchislo2.setHorizontalAlignment(SwingConstants.CENTER);
+ lblchislo2.setBounds(416, 63, 74, 74);
+ panel.add(lblchislo2);
+ 
+ JLabel lblchislo3 = new JLabel("");
+ lblchislo3.setFont(new Font("Franklin Gothic Book", Font.PLAIN, 25));
+ lblchislo3.setHorizontalAlignment(SwingConstants.CENTER);
+ lblchislo3.setBounds(530, 63, 74, 74);
+ panel.add(lblchislo3);
+ 
+ JLabel lblpechalba = new JLabel("");
+ lblpechalba.setFont(new Font("Franklin Gothic Book", Font.PLAIN, 30));
+ lblpechalba.setBounds(229, 274, 143, 54);
+ panel.add(lblpechalba);
+ 
+ JLabel lblNewLabel_1 = new JLabel("");
+ lblNewLabel_1.setBounds(428, 219, 176, 129);
+ panel.add(lblNewLabel_1);
+ 
+ JButton btnNewButton = new JButton("\u0420\u0430\u0437\u0431\u044A\u0440\u043A\u0430\u0439");
+ btnNewButton.addActionListener(new ActionListener() {
+ public void actionPerformed(ActionEvent e) {
+ Random rand = new Random(); 
+       int upperbound = 10;
+       int br=0,br1=0,br2=0,br3=0,pechalba=0;
+       int c1 = rand.nextInt(upperbound); 
+       int c2 = rand.nextInt(upperbound); 
+       int c3 = rand.nextInt(upperbound); 
+       lblchislo1.setText(Integer.toString(c1));
+       lblchislo2.setText(Integer.toString(c2));
+       lblchislo3.setText(Integer.toString(c3));
+       if (c1==7)br1++;
+       if (c2==7)br2++;
+       if (c3==7)br3++;
+       br=br1+br2+br3;
+       if (br==1) {
+        pechalba+=50;
+        lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\Money-bag-with-pile-coins-and-bills-cash-on-transparent-background-PNG-removebg-preview (2).png"));
+       }
+       else if (br==2) {
+        pechalba+=100;
+        lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\Money-bag-with-pile-coins-and-bills-cash-on-transparent-background-PNG-removebg-preview (2).png"));
+       }
+       else if (br==3) {
+        pechalba+=500;
+        lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\Money-bag-with-pile-coins-and-bills-cash-on-transparent-background-PNG-removebg-preview (2).png"));
+       }
+       else lblNewLabel_1.setIcon(new ImageIcon(""));
+       lblpechalba.setText(Integer.toString(pechalba));
+ }
+ });
+ btnNewButton.setFont(new Font("Verdana", Font.PLAIN, 15));
+ btnNewButton.setBounds(49, 63, 147, 74);
+ panel.add(btnNewButton);
+ 
+ JPanel panel_1 = new JPanel();
+ panel_1.setForeground(SystemColor.windowText);
+ panel_1.setBackground(SystemColor.window);
+ panel_1.setBounds(299, 63, 74, 74);
+ panel.add(panel_1);
+ 
+ JPanel panel_1_1 = new JPanel();
+ panel_1_1.setBackground(Color.WHITE);
+ panel_1_1.setBounds(416, 63, 74, 74);
+ panel.add(panel_1_1);
+ 
+ JPanel panel_1_2 = new JPanel();
+ panel_1_2.setBackground(Color.WHITE);
+ panel_1_2.setBounds(530, 63, 74, 74);
+ panel.add(panel_1_2);
+ 
+ JLabel lblNewLabel = new JLabel("\u041F\u0415\u0427\u0410\u041B\u0411\u0410:");
+ lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 20));
+ lblNewLabel.setBounds(49, 274, 147, 54);
+ panel.add(lblNewLabel);
+ 
+ JButton exit = new JButton("\u0418\u0417\u0425\u041E\u0414");
+ exit.addActionListener(new ActionListener() {
+ public void actionPerformed(ActionEvent e) {
+ System.exit(0);
+ }
+ });
+ exit.setFont(new Font("Verdana", Font.PLAIN, 15));
+ exit.setBounds(74, 412, 530, 46);
+ panel.add(exit);
+ 
+ }
+}
