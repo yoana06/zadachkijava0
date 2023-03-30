@@ -1,0 +1,147 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class proletno_prilojenie extends JFrame {
+
+	private JPanel contentPane;
+
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					proletno_prilojenie frame = new proletno_prilojenie();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+	public proletno_prilojenie() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 747, 579);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 240, 245));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Пролетни цветя");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Sitka Subheading", Font.PLAIN, 20));
+		lblNewLabel.setBounds(10, 11, 711, 22);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnlale = new JButton("New button");
+		btnlale.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Изящното лале е един от най-лесно разпознаваемите символи на пролетта.\nС безкрайното си разнообразие от цветове – от бяло и ярко жълто до тъмно лилаво и дори черно, \nпреливащи се нюанси и различни форми на листата, лалетата могат да очароват всекиго. \nВъпреки че се свързват най-вече с Холандия, лалетата са популярни из целия свят, включително в България. \nИзползват се широко при аранжиране на букети и различните цветове имат отделни значения на “езика на цветята”. ");
+			}
+		});
+		btnlale.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\Tulipa_suaveolens_floriade_to_Canberra (1) (1).jpg"));
+		btnlale.setBounds(46, 63, 135, 150);
+		contentPane.add(btnlale);
+		
+		JButton btnbergeniq = new JButton("New button");
+		btnbergeniq.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Бергенията е вечнозелено растение, чиято родина е Азия. Познато е още като бадан, \nслонки уши или монголски чай. Цветовете му достигат до височина 60 см, \nа в основата растението има красиви големи овални или сърцевидни листа. ");
+			}
+		});
+		btnbergeniq.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\skin-bergenia-5251573__480 (1).jpg"));
+		btnbergeniq.setBounds(306, 63, 135, 150);
+		contentPane.add(btnbergeniq);
+		
+		JButton btnminzuhar = new JButton("New button");
+		btnminzuhar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Минзухарът е сред първите пролетни цветя, които даряват земята с красотата си.  В градините то приветства зараждането на нов живот и разбуждането на природата. \nМинзухарите се срещат в природата по високопланинските склонове, припечни ливади и хълмове край топящите се снегове. \nПоявяват се толкова рано, защото в подземната част има натрупана резервна храна, която поддържа растението, докато земята се постопли. \nТози предвестник на пролетта обича слънчевите лъчи и се е приспособил така, че се появява, преди гората да е разлистена, \nпреди дърветата и храстите да са хвърлили сянка.");
+			}
+		});
+		btnminzuhar.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\minzuhar (1).jpg"));
+		btnminzuhar.setBounds(546, 63, 135, 150);
+		contentPane.add(btnminzuhar);
+		
+		JButton btnnarcis = new JButton("New button");
+		btnnarcis.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Нежният и прекрасен нарцис е обичано цвете и присъства почти във всяка градина. \nТой е едно от първите пролетни цветя и красотата му е символ на топлото и слънчево време. \nС жълтия си цвят той наистина огрява градината подобно на слънце. Родът Нарциси обединява около 60 вида.");
+			}
+		});
+		btnnarcis.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\i008605 (1).jpg"));
+		btnnarcis.setBounds(46, 308, 135, 150);
+		contentPane.add(btnnarcis);
+		
+		JButton btnzyumbyul = new JButton("New button");
+		btnzyumbyul.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Зюмбюлът е едно от най-популярните и най-обичани цветя в българския двор. Наречен е на името на прекрасния юноша Хиацинт от гръцката митология");
+			}
+		});
+		btnzyumbyul.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\Zyumbyuli (1).jpg"));
+		btnzyumbyul.setBounds(306, 308, 135, 150);
+		contentPane.add(btnzyumbyul);
+		
+		JButton btntemenujka = new JButton("New button");
+		btntemenujka.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, " Теменужката е едно от най-обичаните растения от градинари и аматьори, тъй като не се нуждае от много грижи. \nОт Вас се иска само да я посадите и да поддържате почвата влажна. В началото на пролетта можете да наторите, за по-обилен цъфтеж. \nЕдроцветните сортове се нуждаят от периодично премахване на прецъфтелите цветове.");
+			}
+		});
+		btntemenujka.setIcon(new ImageIcon("C:\\Users\\Lenovo\\Downloads\\temenujka5 (1).jpg"));
+		btntemenujka.setBounds(546, 308, 135, 150);
+		contentPane.add(btntemenujka);
+		
+		JLabel lblNewLabel_1 = new JLabel("Лале");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setBounds(46, 225, 135, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Бергения");
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1.setBounds(306, 224, 135, 14);
+		contentPane.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Минзухар");
+		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_1.setBounds(546, 224, 135, 14);
+		contentPane.add(lblNewLabel_1_1_1);
+		
+		JLabel lblNewLabel_1_1_2 = new JLabel("Нарцис");
+		lblNewLabel_1_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_2.setBounds(46, 469, 135, 14);
+		contentPane.add(lblNewLabel_1_1_2);
+		
+		JLabel lblNewLabel_1_1_3 = new JLabel("Зюмбюл");
+		lblNewLabel_1_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_3.setBounds(306, 469, 135, 14);
+		contentPane.add(lblNewLabel_1_1_3);
+		
+		JLabel lblNewLabel_1_1_4 = new JLabel("Теменужка");
+		lblNewLabel_1_1_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_4.setBounds(546, 469, 135, 14);
+		contentPane.add(lblNewLabel_1_1_4);
+		
+		JLabel lblNewLabel_2 = new JLabel("Цъкнете на изображението, за да разберете повече информация за цветето.");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setBounds(46, 264, 635, 14);
+		contentPane.add(lblNewLabel_2);
+	}
+}
