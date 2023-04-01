@@ -1,0 +1,281 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import java.awt.Color;
+
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class picariq extends JFrame {
+
+ private JPanel contentPane;
+
+ 
+ public static void main(String[] args) {
+ EventQueue.invokeLater(new Runnable() {
+ public void run() {
+ try {
+ picariq frame = new picariq();
+ frame.setVisible(true);
+ } catch (Exception e) {
+ e.printStackTrace();
+ }
+ }
+ });
+ }
+
+ 
+ public picariq() {
+ setTitle("\u043F\u0438\u0446\u0430\u0440\u0438\u044F \"\u0418\u0442\u0430\u043B\u0438\u044F\u043D\u0430\"");
+ setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ setBounds(100, 100, 654, 556);
+ contentPane = new JPanel();
+ contentPane.setBackground(new Color(255, 235, 205));
+ contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+ setContentPane(contentPane);
+ contentPane.setLayout(null);
+ 
+ JPanel panel = new JPanel();
+ panel.setBackground(new Color(255, 228, 181));
+ panel.setBorder(new TitledBorder(null, "\u0412\u0438\u0434", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+ panel.setBounds(9, 8, 406, 501);
+ contentPane.add(panel);
+ panel.setLayout(null);
+ 
+ JLabel lblNewLabel = new JLabel("\u0421\u043D\u0438\u043C\u043A\u0430 ");
+ lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+ lblNewLabel.setBounds(32, 25, 46, 14);
+ panel.add(lblNewLabel);
+ 
+ JLabel lblNewLabel_1 = new JLabel("\u0418\u043C\u0435");
+ lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+ lblNewLabel_1.setBounds(140, 28, 46, 14);
+ panel.add(lblNewLabel_1);
+ 
+ JLabel lblNewLabel_2 = new JLabel("250\u0433\u0440");
+ lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+ lblNewLabel_2.setBounds(231, 29, 46, 14);
+ panel.add(lblNewLabel_2);
+ 
+ JLabel lblNewLabel_3 = new JLabel("500\u0433\u0440");
+ lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 11));
+ lblNewLabel_3.setBounds(327, 31, 46, 14);
+ panel.add(lblNewLabel_3);
+ 
+ JRadioButton margarita = new JRadioButton("\u041C\u0430\u0440\u0433\u0430\u0440\u0438\u0442\u0430");
+ margarita.setBackground(new Color(255, 228, 181));
+ margarita.setBounds(105, 57, 109, 23);
+ panel.add(margarita);
+ 
+ JRadioButton karuzo = new JRadioButton("\u041A\u0430\u0440\u0443\u0437\u043E");
+ karuzo.setBackground(new Color(255, 228, 181));
+ karuzo.setBounds(105, 144, 109, 23);
+ panel.add(karuzo);
+ 
+ JRadioButton vegetariana = new JRadioButton("\u0412\u0435\u0433\u0435\u0442\u0430\u0440\u0438\u0430\u043D\u0430");
+ vegetariana.setBackground(new Color(255, 228, 181));
+ vegetariana.setBounds(105, 225, 109, 23);
+ panel.add(vegetariana);
+ 
+ JRadioButton havai = new JRadioButton("\u0425\u0430\u0432\u0430\u0439");
+ havai.setBackground(new Color(255, 228, 181));
+ havai.setBounds(105, 311, 109, 23);
+ panel.add(havai);
+ 
+ JRadioButton kalcone = new JRadioButton("\u041A\u0430\u043B\u0446\u043E\u043D\u0435");
+ kalcone.setBackground(new Color(255, 228, 181));
+ kalcone.setBounds(105, 401, 109, 23);
+ panel.add(kalcone);
+ 
+ JLabel lblNewLabel_4 = new JLabel("6.00\u043B\u0432");
+ lblNewLabel_4.setBounds(231, 61, 46, 14);
+ panel.add(lblNewLabel_4);
+ 
+ JLabel lblNewLabel_4_1 = new JLabel("6.40\u043B\u0432");
+ lblNewLabel_4_1.setBounds(231, 144, 46, 14);
+ panel.add(lblNewLabel_4_1);
+ 
+ JLabel lblNewLabel_4_2 = new JLabel("5.30\u043B\u0432");
+ lblNewLabel_4_2.setBounds(231, 225, 46, 14);
+ panel.add(lblNewLabel_4_2);
+ 
+ JLabel lblNewLabel_4_3 = new JLabel("6.10\u043B\u0432");
+ lblNewLabel_4_3.setBounds(231, 311, 46, 14);
+ panel.add(lblNewLabel_4_3);
+ 
+ JLabel lblNewLabel_4_4 = new JLabel("6.30\u043B\u0432");
+ lblNewLabel_4_4.setBounds(231, 401, 46, 14);
+ panel.add(lblNewLabel_4_4);
+ 
+ JLabel lblNewLabel_4_5 = new JLabel("3.90\u043B\u0432");
+ lblNewLabel_4_5.setBounds(326, 61, 46, 14);
+ panel.add(lblNewLabel_4_5);
+ 
+ JLabel lblNewLabel_4_6 = new JLabel("4.40\u043B\u0432");
+ lblNewLabel_4_6.setBounds(327, 144, 46, 14);
+ panel.add(lblNewLabel_4_6);
+ 
+ JLabel lblNewLabel_4_7 = new JLabel("3.30\u043B\u0432");
+ lblNewLabel_4_7.setBounds(327, 225, 46, 14);
+ panel.add(lblNewLabel_4_7);
+ 
+ JLabel lblNewLabel_4_8 = new JLabel("4.10\u043B\u0432");
+ lblNewLabel_4_8.setBounds(327, 310, 46, 14);
+ panel.add(lblNewLabel_4_8);
+ 
+ JLabel lblNewLabel_4_9 = new JLabel("4.30\u043B\u0432");
+ lblNewLabel_4_9.setBounds(327, 401, 46, 14);
+ panel.add(lblNewLabel_4_9);
+ 
+ JLabel lblNewLabel_5 = new JLabel("New label");
+ lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\images (3).jpg"));
+ lblNewLabel_5.setBounds(13, 43, 82, 77);
+ panel.add(lblNewLabel_5);
+ 
+ JLabel lblNewLabel_6 = new JLabel("New label");
+ lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (3) (1).jpg"));
+ lblNewLabel_6.setBounds(13, 131, 80, 80);
+ panel.add(lblNewLabel_6);
+ 
+ JLabel lblNewLabel_6_1 = new JLabel("New label");
+ lblNewLabel_6_1.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (1) (1) (1).jpg"));
+ lblNewLabel_6_1.setBounds(14, 222, 80, 80);
+ panel.add(lblNewLabel_6_1);
+ 
+ JLabel lblNewLabel_6_2 = new JLabel("New label");
+ lblNewLabel_6_2.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\images (1) (1).jpg"));
+ lblNewLabel_6_2.setBounds(13, 313, 80, 80);
+ panel.add(lblNewLabel_6_2);
+ 
+ JLabel lblNewLabel_6_3 = new JLabel("New label");
+ lblNewLabel_6_3.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (2) (1) (1).jpg"));
+ lblNewLabel_6_3.setBounds(13, 401, 80, 80);
+ panel.add(lblNewLabel_6_3);
+ 
+ JPanel panel_1 = new JPanel();
+ panel_1.setBackground(new Color(255, 228, 181));
+ panel_1.setBorder(new TitledBorder(null, "\u0421\u043E\u0441\u043E\u0432\u0435", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+ panel_1.setBounds(430, 15, 194, 255);
+ contentPane.add(panel_1);
+ panel_1.setLayout(null);
+ 
+ JCheckBox gorchica = new JCheckBox("\u0413\u043E\u0440\u0447\u0438\u0446\u0430");
+ gorchica.setBackground(new Color(255, 228, 181));
+ gorchica.setBounds(35, 47, 97, 23);
+ panel_1.add(gorchica);
+ 
+ JCheckBox ketchup = new JCheckBox("\u041A\u0435\u0442\u0447\u0443\u043F");
+ ketchup.setBackground(new Color(255, 228, 181));
+ ketchup.setBounds(35, 103, 97, 23);
+ panel_1.add(ketchup);
+ 
+ JCheckBox mayoneza = new JCheckBox("\u041C\u0430\u0439\u043E\u043D\u0435\u0437\u0430");
+ mayoneza.setBackground(new Color(255, 228, 181));
+ mayoneza.setBounds(35, 163, 97, 23);
+ panel_1.add(mayoneza);
+ 
+ JPanel panel_2 = new JPanel();
+ panel_2.setBackground(new Color(255, 228, 181));
+ panel_2.setBorder(new TitledBorder(null, "\u0413\u043E\u043B\u0435\u043C\u0438\u043D\u0430", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+ panel_2.setBounds(430, 293, 195, 216);
+ contentPane.add(panel_2);
+ panel_2.setLayout(null);
+ 
+ JRadioButton malka = new JRadioButton("\u041C\u0430\u043B\u043A\u0430");
+ malka.setBackground(new Color(255, 228, 181));
+ malka.setBounds(35, 29, 109, 23);
+ panel_2.add(malka);
+ 
+ JRadioButton golqma = new JRadioButton("\u0413\u043E\u043B\u044F\u043C\u0430");
+ golqma.setBackground(new Color(255, 228, 181));
+ golqma.setBounds(35, 66, 109, 23);
+ panel_2.add(golqma);
+ 
+ JButton btnNewButton = new JButton("\u041F\u041E\u0420\u042A\u0427\u041A\u0410");
+ btnNewButton.addActionListener(new ActionListener() {
+ public void actionPerformed(ActionEvent e) {
+ ButtonGroup vid=new ButtonGroup();
+ ButtonGroup razmer=new ButtonGroup();
+ double sum=0.0;
+ String pica="";
+ String golemina="";
+ String sos="";
+ String nosos="";
+ vid.add(margarita);
+ vid.add(kalcone);
+ vid.add(karuzo);
+ vid.add(vegetariana);
+ vid.add(havai);
+ razmer.add(malka);
+ razmer.add(golqma);
+ if (margarita.isSelected()&& malka.isSelected()) {
+ pica="Маргарита";
+ golemina="малка";
+ sum=6.00;
+ } else if (margarita.isSelected()&& golqma.isSelected()) {
+ pica="Маргарита";
+ golemina="голяма";
+ sum=3.90;
+ }
+ if (karuzo.isSelected()&& malka.isSelected()) {
+ pica="Карузо";
+ golemina="малка";
+ sum=6.40;
+ } else if (karuzo.isSelected()&& golqma.isSelected()) {
+ pica="Карузо";
+ golemina="голяма";
+ sum=4.40;
+ }
+ if (vegetariana.isSelected()&& malka.isSelected()) {
+ pica="Вегетариана";
+ golemina="малка";
+ sum=5.30;
+ } else if (vegetariana.isSelected()&& golqma.isSelected()) {
+ pica="Вегетариана";
+ golemina="голяма";
+ sum=3.30;
+ }
+ if (havai.isSelected()&& malka.isSelected()) {
+ pica="Хавай";
+ golemina="малка";
+ sum=6.10;
+ } else if (havai.isSelected()&& golqma.isSelected()) {
+ pica="Хавай";
+ golemina="голяма";
+ sum=4.10;
+ }
+ if (kalcone.isSelected()&& malka.isSelected()) {
+ pica="Калцоне";
+ golemina="малка";
+ sum=6.30;
+ } else if (kalcone.isSelected()&& golqma.isSelected()) {
+ pica="Калцоне";
+ golemina="голяма";
+ sum=4.30;
+ }
+ if (gorchica.isSelected())sos+=" горчица";
+ if (mayoneza.isSelected())sos+=" майонеза";
+ if (ketchup.isSelected())sos+=" кетчуп";
+ 
+ JOptionPane.showMessageDialog(null, "Вие си поръчахте "+golemina+" пица "+pica+" с"+sos+". Моля платете "+sum+"лв. и изчакайте 15 минути!");
+ 
+ }
+ });
+ btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+ btnNewButton.setBounds(30, 111, 136, 70);
+ panel_2.add(btnNewButton);
+ }
+}
