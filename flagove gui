@@ -1,0 +1,221 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.border.EtchedBorder;
+
+public class flagove extends JFrame {
+
+private JPanel contentPane;
+
+public static void main(String[] args) {
+EventQueue.invokeLater(new Runnable() {
+public void run() {
+try {
+flagove frame = new flagove();
+frame.setVisible(true);
+} catch (Exception e) {
+e.printStackTrace();
+}
+}
+});
+}
+
+public flagove() {
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setBounds(100, 100, 546, 634);
+contentPane = new JPanel();
+contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+setContentPane(contentPane);
+contentPane.setLayout(null);
+JPanel panel = new JPanel();
+panel.setBackground(Color.LIGHT_GRAY);
+panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0424\u043B\u0430\u0433\u043E\u0432\u0435", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+panel.setBounds(10, 11, 510, 573);
+contentPane.add(panel);
+panel.setLayout(null);
+JLabel fr = new JLabel("");
+fr.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\fr (2).png"));
+fr.setBounds(232, 50, 100, 67);
+panel.add(fr);
+JLabel sp = new JLabel("");
+sp.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (2).png"));
+sp.setBounds(232, 140, 100, 66);
+panel.add(sp);
+JLabel it = new JLabel("");
+it.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (1).png"));
+it.setBounds(232, 230, 100, 66);
+panel.add(it);
+JLabel sw = new JLabel("");
+sw.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\sw.png"));
+sw.setBounds(232, 320, 100, 68);
+panel.add(sw);
+JLabel ger = new JLabel("");
+ger.setIcon(new ImageIcon("C:\\Users\\Student\\Downloads\\download (3).png"));
+ger.setBounds(232, 414, 100, 60);
+panel.add(ger);
+JLabel lblNewLabel = new JLabel("\u0421\u0442\u043E\u043B\u0438\u0446\u0430:");
+lblNewLabel.setBounds(403, 58, 66, 14);
+panel.add(lblNewLabel);
+JLabel lblNewLabel_1 = new JLabel("\u0421\u0442\u043E\u043B\u0438\u0446\u0430:");
+lblNewLabel_1.setBounds(403, 148, 66, 14);
+panel.add(lblNewLabel_1);
+JLabel lblNewLabel_2 = new JLabel("\u0421\u0442\u043E\u043B\u0438\u0446\u0430:");
+lblNewLabel_2.setBounds(403, 238, 66, 14);
+panel.add(lblNewLabel_2);
+JLabel lblNewLabel_3 = new JLabel("\u0421\u0442\u043E\u043B\u0438\u0446\u0430:");
+lblNewLabel_3.setBounds(403, 328, 66, 14);
+panel.add(lblNewLabel_3);
+JLabel lblNewLabel_4 = new JLabel("\u0421\u0442\u043E\u043B\u0438\u0446\u0430:");
+lblNewLabel_4.setBounds(403, 418, 66, 14);
+panel.add(lblNewLabel_4);
+JLabel paris = new JLabel("");
+paris.setBounds(403, 83, 82, 14);
+panel.add(paris);
+JLabel madrid = new JLabel("");
+madrid.setBounds(403, 173, 82, 14);
+panel.add(madrid);
+JLabel rome = new JLabel("");
+rome.setBounds(403, 263, 82, 14);
+panel.add(rome);
+JLabel stockholm = new JLabel("");
+stockholm.setBounds(403, 353, 97, 14);
+panel.add(stockholm);
+JLabel berlin = new JLabel("");
+berlin.setBounds(403, 443, 82, 14);
+panel.add(berlin);
+ger.setVisible(false);
+fr.setVisible(false);
+it.setVisible(false);
+sp.setVisible(false);
+sw.setVisible(false);
+JButton france = new JButton("\u0424\u0440\u0430\u043D\u0446\u0438\u044F");
+france.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+fr.setVisible(true);
+ger.setVisible(false);
+it.setVisible(false);
+sp.setVisible(false);
+sw.setVisible(false);
+paris.setText("Париж");
+madrid.setText("");
+rome.setText("");
+berlin.setText("");
+stockholm.setText("");
+panel.setBackground(Color.blue);
+}
+});
+france.setBounds(45, 50, 100, 30);
+panel.add(france);
+JButton spain = new JButton("\u0418\u0441\u043F\u0430\u043D\u0438\u044F");
+spain.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+sp.setVisible(true);
+ger.setVisible(false);
+fr.setVisible(false);
+it.setVisible(false);
+sw.setVisible(false);
+madrid.setText("Мадрид");
+paris.setText("");
+rome.setText("");
+berlin.setText("");
+stockholm.setText("");
+panel.setBackground(Color.orange);
+}
+});
+spain.setBounds(45, 140, 100, 30);
+panel.add(spain);
+JButton italy = new JButton("\u0418\u0442\u0430\u043B\u0438\u044F");
+italy.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+it.setVisible(true);
+ger.setVisible(false);
+fr.setVisible(false);
+sp.setVisible(false);
+sw.setVisible(false);
+rome.setText("Рим");
+paris.setText("");
+madrid.setText("");
+berlin.setText("");
+stockholm.setText("");
+panel.setBackground(Color.GREEN);
+}
+});
+italy.setBounds(45, 230, 100, 30);
+panel.add(italy);
+JButton sweden = new JButton("\u0428\u0432\u0435\u0446\u0438\u044F");
+sweden.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+sw.setVisible(true);
+ger.setVisible(false);
+fr.setVisible(false);
+it.setVisible(false);
+sp.setVisible(false);
+stockholm.setText("Стокхолм");
+paris.setText("");
+madrid.setText("");
+rome.setText("");
+berlin.setText("");
+panel.setBackground(Color.yellow);
+}
+});
+sweden.setBounds(45, 320, 100, 30);
+panel.add(sweden);
+JButton germany = new JButton("\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F");
+germany.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+ger.setVisible(true);
+fr.setVisible(false);
+it.setVisible(false);
+sp.setVisible(false);
+sw.setVisible(false);
+berlin.setText("Берлин");
+paris.setText("");
+madrid.setText("");
+rome.setText("");
+stockholm.setText("");
+panel.setBackground(Color.red);
+}
+});
+germany.setBounds(45, 410, 100, 30);
+panel.add(germany);
+JButton izhod = new JButton("\u0418\u0417\u0425\u041E\u0414");
+izhod.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+System.exit(0);
+}
+});
+izhod.setBounds(269, 494, 100, 30);
+panel.add(izhod);
+JButton izchisti = new JButton("\u0418\u0417\u0427\u0418\u0421\u0422\u0418");
+izchisti.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+ger.setVisible(false);
+fr.setVisible(false);
+it.setVisible(false);
+sp.setVisible(false);
+sw.setVisible(false);
+paris.setText("");
+madrid.setText("");
+rome.setText("");
+berlin.setText("");
+stockholm.setText("");
+panel.setBackground(Color.LIGHT_GRAY);
+}
+});
+izchisti.setBounds(147, 494, 100, 30);
+panel.add(izchisti);
+
+}
+}
