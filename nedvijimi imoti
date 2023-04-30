@@ -1,0 +1,218 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JComboBox;
+import java.awt.FlowLayout;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.border.TitledBorder;
+import javax.swing.JRadioButton;
+import javax.swing.border.EtchedBorder;
+import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import javax.swing.ButtonGroup;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class nedvijimi_imoti extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					nedvijimi_imoti frame = new nedvijimi_imoti();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public nedvijimi_imoti() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 546, 404);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 204, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(68, 10, 394, 25);
+		panel.setBackground(new Color(147, 112, 219));
+		contentPane.add(panel);
+		panel.setLayout(new BorderLayout(0, 0));
+		
+		JLabel lblNewLabel = new JLabel("Агенция за недвижими имоти \"Сара\" ");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		panel.add(lblNewLabel, BorderLayout.CENTER);
+		
+		JLabel lblNewLabel_1 = new JLabel("Вид имот: ");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNewLabel_1.setBounds(18, 64, 82, 16);
+		contentPane.add(lblNewLabel_1);
+		
+		JComboBox imot = new JComboBox();
+		imot.setModel(new DefaultComboBoxModel(new String[] {"", "вила", "апартамент", "къща", "офис"}));
+		imot.setBounds(110, 62, 136, 22);
+		contentPane.add(imot);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(179, 179, 255));
+		panel_1.setBorder(new TitledBorder(null, "\u0411\u0440\u043E\u0439 \u0441\u0442\u0430\u0438", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_1.setBounds(18, 117, 189, 103);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JRadioButton edna = new JRadioButton("1");
+		buttonGroup.add(edna);
+		edna.setBackground(new Color(179, 179, 255));
+		edna.setBounds(19, 22, 56, 23);
+		panel_1.add(edna);
+		
+		JRadioButton dve = new JRadioButton("2");
+		buttonGroup.add(dve);
+		dve.setBackground(new Color(179, 179, 255));
+		dve.setBounds(19, 59, 56, 23);
+		panel_1.add(dve);
+		
+		JRadioButton tri = new JRadioButton("3");
+		buttonGroup.add(tri);
+		tri.setBackground(new Color(179, 179, 255));
+		tri.setBounds(108, 22, 56, 23);
+		panel_1.add(tri);
+		
+		JRadioButton chetiri = new JRadioButton("4");
+		buttonGroup.add(chetiri);
+		chetiri.setBackground(new Color(179, 179, 255));
+		chetiri.setBounds(108, 59, 56, 23);
+		panel_1.add(chetiri);
+		
+		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setLayout(null);
+		panel_1_1.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0415\u043A\u0441\u0442\u0440\u0438", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_1_1.setBackground(new Color(179, 179, 255));
+		panel_1_1.setBounds(241, 117, 267, 103);
+		contentPane.add(panel_1_1);
+		
+		JCheckBox toplo = new JCheckBox("ц. отопление");
+		toplo.setBackground(new Color(179, 179, 255));
+		toplo.setBounds(19, 25, 126, 23);
+		panel_1_1.add(toplo);
+		
+		JCheckBox klimatik = new JCheckBox("климатик");
+		klimatik.setBackground(new Color(179, 179, 255));
+		klimatik.setBounds(19, 60, 97, 23);
+		panel_1_1.add(klimatik);
+		
+		JCheckBox garaj = new JCheckBox("гараж");
+		garaj.setBackground(new Color(179, 179, 255));
+		garaj.setBounds(147, 25, 97, 23);
+		panel_1_1.add(garaj);
+		
+		JCheckBox novo = new JCheckBox("ново");
+		novo.setBackground(new Color(179, 179, 255));
+		novo.setBounds(147, 60, 97, 23);
+		panel_1_1.add(novo);
+		
+		JPanel panel_1_2 = new JPanel();
+		panel_1_2.setLayout(null);
+		panel_1_2.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "\u0412\u0438\u0435 \u0438\u0437\u0431\u0440\u0430\u0445\u0442\u0435", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel_1_2.setBackground(new Color(179, 179, 255));
+		panel_1_2.setBounds(18, 240, 355, 103);
+		contentPane.add(panel_1_2);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("Вид имот: ");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1.setBounds(10, 25, 82, 16);
+		panel_1_2.add(lblNewLabel_1_1);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("Брой стаи:");
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_1.setBounds(10, 52, 82, 16);
+		panel_1_2.add(lblNewLabel_1_1_1);
+		
+		JLabel lblNewLabel_1_1_2 = new JLabel("Екстри:");
+		lblNewLabel_1_1_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel_1_1_2.setBounds(10, 79, 82, 16);
+		panel_1_2.add(lblNewLabel_1_1_2);
+		
+		JLabel brstai = new JLabel(" ");
+		brstai.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		brstai.setBounds(86, 52, 82, 16);
+		panel_1_2.add(brstai);
+		
+		JLabel vid = new JLabel(" ");
+		vid.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		vid.setBounds(86, 27, 82, 16);
+		panel_1_2.add(vid);
+		
+		JLabel ekstri = new JLabel(" ");
+		ekstri.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		ekstri.setBounds(86, 79, 259, 16);
+		panel_1_2.add(ekstri);
+		
+		JButton zaqvka = new JButton("ЗАЯВКА");
+		zaqvka.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				vid.setText(imot.getSelectedItem().toString());
+				String ek="";
+				if (edna.isSelected())brstai.setText("1");
+				if (dve.isSelected())brstai.setText("2");
+				if (tri.isSelected())brstai.setText("3");
+				if (chetiri.isSelected())brstai.setText("4");
+				if (toplo.isSelected())ek+="ц. отопление; ";
+				if (klimatik.isSelected())ek+="климатик; ";
+				if (garaj.isSelected())ek+="гараж; ";
+				if (novo.isSelected())ek+="ново строителство; ";
+				ekstri.setText(ek);
+				if (!edna.isSelected()&&!dve.isSelected()&&!tri.isSelected()&&!chetiri.isSelected())JOptionPane.showMessageDialog(null, "Моля, изберете брой стаи.");
+			}
+		});
+		zaqvka.setFont(new Font("Tahoma", Font.BOLD, 12));
+		zaqvka.setBounds(400, 247, 89, 23);
+		contentPane.add(zaqvka);
+		
+		JButton nova = new JButton("НОВА");
+		nova.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ekstri.setText("");
+				brstai.setText("");
+				vid.setText("");
+				buttonGroup.clearSelection();
+				toplo.setSelected(false);
+				klimatik.setSelected(false);
+				garaj.setSelected(false);
+				novo.setSelected(false);
+				imot.setSelectedIndex(0);
+			}
+		});
+		nova.setFont(new Font("Tahoma", Font.BOLD, 12));
+		nova.setBounds(400, 281, 89, 23);
+		contentPane.add(nova);
+		
+		JButton izhod = new JButton("ИЗХОД");
+		izhod.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		izhod.setFont(new Font("Tahoma", Font.BOLD, 12));
+		izhod.setBounds(400, 315, 89, 23);
+		contentPane.add(izhod);
+	}
+}
