@@ -1,0 +1,227 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JCheckBox;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ButtonGroup;
+
+public class avtokushta extends JFrame {
+
+	private JPanel contentPane;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					avtokushta frame = new avtokushta();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+	public avtokushta() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 734, 347);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(67, 97, 214));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(128, 148, 227));
+		panel.setBounds(10, 11, 698, 40);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("АВТОКЪЩА");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Trebuchet MS", Font.BOLD | Font.ITALIC, 25));
+		lblNewLabel.setBounds(10, 0, 678, 40);
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Lenovo\\OneDrive - Министерство на образованието и науката\\Pictures\\honda-car-honda-accord-incentives-specials-offers-moon-25.png"));
+		lblNewLabel_1.setBounds(468, 62, 213, 112);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("МАРКА");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2.setBounds(30, 82, 87, 22);
+		contentPane.add(lblNewLabel_2);
+		
+		JComboBox marka = new JComboBox();
+		marka.setModel(new DefaultComboBoxModel(new String[] {"audi", "opel", "bmw", "suzuki", "skoda", "citroen", "peugeot"}));
+		marka.setBounds(30, 105, 116, 22);
+		contentPane.add(marka);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("ВИД ДВИГАТЕЛ");
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2_1.setBounds(30, 138, 173, 22);
+		contentPane.add(lblNewLabel_2_1);
+		
+		JComboBox dvigatel = new JComboBox();
+		dvigatel.setModel(new DefaultComboBoxModel(new String[] {"бензин", "дизел", "електрически", "хибриден", "Plug-in хибрид"}));
+		dvigatel.setBounds(30, 161, 116, 22);
+		contentPane.add(dvigatel);
+		
+		JLabel lblNewLabel_2_2 = new JLabel("ЕКСТРИ");
+		lblNewLabel_2_2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2_2.setBounds(245, 194, 133, 22);
+		contentPane.add(lblNewLabel_2_2);
+		
+		JCheckBox salon = new JCheckBox("кожен салон");
+		salon.setBackground(new Color(67, 97, 214));
+		salon.setBounds(245, 243, 116, 23);
+		contentPane.add(salon);
+		
+		JCheckBox klimatik = new JCheckBox("климатик");
+		klimatik.setBackground(new Color(67, 97, 214));
+		klimatik.setBounds(245, 217, 116, 23);
+		contentPane.add(klimatik);
+		
+		JLabel lblNewLabel_2_2_1 = new JLabel("ЦВЯТ");
+		lblNewLabel_2_2_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2_2_1.setBounds(30, 194, 133, 22);
+		contentPane.add(lblNewLabel_2_2_1);
+		
+		JComboBox cvqt = new JComboBox();
+		cvqt.setModel(new DefaultComboBoxModel(new String[] {"бял", "тъмно сив", "черен", "червен", "син", "зелен", "сребрист", "зелен"}));
+		cvqt.setBounds(30, 217, 116, 22);
+		contentPane.add(cvqt);
+		
+		JLabel lblNewLabel_2_2_1_1 = new JLabel("СКОРОСТНА КУТИЯ");
+		lblNewLabel_2_2_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2_2_1_1.setBounds(245, 138, 213, 22);
+		contentPane.add(lblNewLabel_2_2_1_1);
+		
+		JComboBox skorosti = new JComboBox();
+		skorosti.setModel(new DefaultComboBoxModel(new String[] {"ръчна", "автоматична", "полуавтоматична"}));
+		skorosti.setBounds(245, 161, 145, 22);
+		contentPane.add(skorosti);
+		
+		JLabel lblNewLabel_2_2_2 = new JLabel("БРОЙ ВРАТИ");
+		lblNewLabel_2_2_2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_2_2_2.setBounds(245, 82, 133, 22);
+		contentPane.add(lblNewLabel_2_2_2);
+		
+		JRadioButton dve = new JRadioButton("2/3");
+		buttonGroup.add(dve);
+		dve.setBackground(new Color(67, 97, 214));
+		dve.setBounds(245, 105, 52, 23);
+		contentPane.add(dve);
+		
+		JRadioButton chetiri = new JRadioButton("4/5");
+		buttonGroup.add(chetiri);
+		chetiri.setBackground(new Color(67, 97, 214));
+		chetiri.setBounds(304, 105, 52, 23);
+		contentPane.add(chetiri);
+		
+		JCheckBox avtopilot = new JCheckBox("автопилот");
+		avtopilot.setBackground(new Color(67, 97, 214));
+		avtopilot.setBounds(245, 269, 116, 23);
+		contentPane.add(avtopilot);
+		
+		JCheckBox sixteen = new JCheckBox("4х4");
+		sixteen.setBackground(new Color(67, 97, 214));
+		sixteen.setBounds(376, 217, 116, 23);
+		contentPane.add(sixteen);
+		
+		JCheckBox parktronik = new JCheckBox("парктроник");
+		parktronik.setBackground(new Color(67, 97, 214));
+		parktronik.setBounds(376, 243, 116, 23);
+		contentPane.add(parktronik);
+		
+		JCheckBox golqma = new JCheckBox("7 места");
+		golqma.setBackground(new Color(67, 97, 214));
+		golqma.setBounds(376, 269, 116, 23);
+		contentPane.add(golqma);
+		
+		JLabel red = new JLabel(" ");
+		red.setForeground(new Color(255, 0, 0));
+		red.setBounds(22, 252, 194, 14);
+		contentPane.add(red); 
+		
+		JButton btnNewButton = new JButton("заяви");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String vrati="";
+				String ek="";
+				String m=marka.getSelectedItem().toString();
+				String c=cvqt.getSelectedItem().toString();
+				String d=dvigatel.getSelectedItem().toString();
+				String s=skorosti.getSelectedItem().toString();
+				
+                if(c.toString().equals("червен"))red.setText("червените автомобили -> -10%");
+				
+				if (dve.isSelected())vrati="2/3";
+				if (chetiri.isSelected())vrati="4/5";
+				
+				if (klimatik.isSelected())ek+="климатик; ";
+				if (avtopilot.isSelected())ek+="автопилот; ";
+				if (golqma.isSelected())ek+="7 места; ";
+				if (parktronik.isSelected())ek+="парктроник; ";
+				if (sixteen.isSelected())ek+="4х4; ";
+				if (salon.isSelected())ek+="кожен салон; ";
+			
+				JOptionPane.showMessageDialog(null, m+"; "+c+"; "+d+"; "+s+"; "+vrati+" врати; "+ek);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton.setBounds(546, 194, 100, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("нулирай");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				buttonGroup.clearSelection();
+				avtopilot.setSelected(false);
+				klimatik.setSelected(false);
+				sixteen.setSelected(false);
+				golqma.setSelected(false);
+				parktronik.setSelected(false);
+				salon.setSelected(false);
+				marka.setSelectedIndex(0);
+				cvqt.setSelectedIndex(0);
+				dvigatel.setSelectedIndex(0);
+				skorosti.setSelectedIndex(0);
+				red.setText("");
+			}
+		});
+		btnNewButton_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton_1.setBounds(546, 233, 100, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("изход");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_2.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton_2.setBounds(546, 267, 100, 23);
+		contentPane.add(btnNewButton_2);
+		
+	}
+}
